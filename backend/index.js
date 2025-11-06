@@ -1,9 +1,9 @@
-const express=require('express')
+import express from 'express'
 const app=express();
-const cors=require('cors')
-const axios=require('axios')
-const nodemailer = require('nodemailer');
-require('dotenv').config();
+import cors from 'cors'
+import axios from 'axios'
+import nodemailer from 'nodemailer'
+import pkg from 'dotenv'
 
 app.use(cors())
 app.use(express.json());
@@ -83,5 +83,7 @@ app.post('/chatai',async(req,res)=>{
     }
 })
 
-
-export default app;
+app.listen(1000,(req,res)=>{
+  console.log('h')
+})
+//export default app;
