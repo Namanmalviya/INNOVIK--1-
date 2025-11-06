@@ -45,7 +45,7 @@ const BookingForm = ({ selectedDoctor, selectedDate, selectedSlot, onBookingSubm
 const to='namanmalviya234@gmail.com'
 
  try {
-      const res = await axios.post("http://localhost:1000/", {
+      const res = await axios.post("https://innovik-1-xzbo.vercel.app/", {
         to:to,
 		//patientEmail:patientEmail,
         subject: "Appointment Booking Confirmation",

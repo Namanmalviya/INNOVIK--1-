@@ -17,7 +17,7 @@ function Symptomchecker() {
 
   const enterprompt = async () => {
     try {
-      const res = await axios.post('http://localhost:1000/Chatai', {
+      const res = await axios.post('https://innovik-1-xzbo.vercel.app/Chatai', {
         prompt: prompt,
       });
 
