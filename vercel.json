@@ -8,18 +8,19 @@
     {
       "src": "INNOVIK-part2/package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "INNOVIK-part2/build" }
-
+      "config": {
+        "distDir": "INNOVIK-part2/build"
+      }
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/api/(.*)",
       "dest": "/index.js"
     },
     {
       "src": "/(.*)",
-      "dest": "/INNOVIK-part2/$1"
+      "dest": "/INNOVIK-part2/build/$1"
     }
   ]
 }
