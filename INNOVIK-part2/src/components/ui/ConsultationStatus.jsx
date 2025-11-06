@@ -22,7 +22,7 @@ const ConsultationStatus = () => {
       } else if (now < upcomingAppointment) {
         setConsultationState('upcoming');
         setTimeRemaining(Math.ceil((upcomingAppointment - now) / (1000 * 60))); // Minutes remaining
-        setIsVisible(true);
+        // setIsVisible(true);
       } else {
         setIsVisible(false);
       }

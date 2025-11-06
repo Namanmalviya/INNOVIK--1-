@@ -39,9 +39,9 @@ const TimeSlotSelector = ({ selectedDoctor, selectedDate, onSlotSelect, selected
 
     // Group slots by period
     const groupedSlots = {
-      morning: [],
-      afternoon: [],
-      evening: []
+      morning: [1,1,1,1,1].map((_,i)=>({id:i+1,time:`0${8+i}:00`,duration:30,isBooked:false,isUrgent:i%3===0})), // Dummy slots from 08:00 to 11:00
+      afternoon: [1,1,1,1,1,1].map((_,i)=>({id:i+1,time:`0${1+i}:00`,duration:30,isBooked:false,isUrgent:i%3===0})),
+      evening: [1,1,1].map((_,i)=>({id:i+1,time:`0${7+i}:00`,duration:30,isBooked:false,isUrgent:i%3===0})),
     };
 
     doctorSlots?.forEach(slot => {

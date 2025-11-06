@@ -37,12 +37,12 @@ const QuickActions = () => {
       default:
         return {
           title: 'Quick Actions',
-          bookAppointment: 'Book Appointment',
-          findMedicine: 'Find Medicine',
-          symptomChecker: 'Symptom Checker',
-          healthRecords: 'Health Records',
-          videoConsult: 'Video Consultation',
-          emergencyHelp: 'Emergency Help'
+          bookAppointment: 'Appointment',
+          findMedicine: 'Medicine',
+          symptomChecker: 'SymptomAI',
+          healthRecords: 'Records',
+          videoConsult: 'Consultation',
+          emergencyHelp: 'Emergency'
         };
     }
   };
@@ -54,7 +54,7 @@ const QuickActions = () => {
       id: 'appointment',
       label: labels?.bookAppointment,
       icon: 'Calendar',
-      color: 'bg-gradient-to-br from-blue-400 to-blue-600',
+      color: 'bg-blue-600',
       route: '/appointment-booking',
       description: 'Schedule with doctors'
     },
@@ -62,7 +62,7 @@ const QuickActions = () => {
       id: 'medicine',
       label: labels?.findMedicine,
       icon: 'Pill',
-      color: 'bg-gradient-to-br from-green-400 to-green-600',
+      color: 'bg-blue-600',
       route: '/medicine-availability',
       description: 'Search nearby pharmacies'
     },
@@ -70,8 +70,8 @@ const QuickActions = () => {
       id: 'symptom',
       label: labels?.symptomChecker,
       icon: 'Stethoscope',
-      color: 'bg-gradient-to-br from-purple-400 to-purple-600',
-      route: '#',
+      color: 'bg-blue-600',
+      route: '/symptomchecker',
       description: 'AI-powered diagnosis',
       action: 'symptom-checker'
     },
@@ -79,7 +79,7 @@ const QuickActions = () => {
       id: 'records',
       label: labels?.healthRecords,
       icon: 'FileText',
-      color: 'bg-gradient-to-br from-orange-400 to-orange-600',
+      color: 'bg-blue-600',
       route: '/digital-health-records',
       description: 'View medical history'
     },
@@ -87,7 +87,7 @@ const QuickActions = () => {
       id: 'video',
       label: labels?.videoConsult,
       icon: 'Video',
-      color: 'bg-gradient-to-br from-cyan-400 to-cyan-600',
+      color: 'bg-blue-600',
       route: '/video-consultation',
       description: 'Start consultation'
     },
@@ -95,7 +95,7 @@ const QuickActions = () => {
       id: 'emergency',
       label: labels?.emergencyHelp,
       icon: 'Phone',
-      color: 'bg-gradient-to-br from-red-400 to-red-600',
+      color: 'bg-red-700',
       route: '#',
       description: 'Emergency services',
       action: 'emergency'
@@ -104,7 +104,7 @@ const QuickActions = () => {
 
   const handleActionClick = (action) => {
     if (action?.action === 'symptom-checker') {
-      // Trigger AI assistant for symptom checking
+     navigate('/symptomchecker')
       console.log('Opening AI symptom checker...');
       // This would typically trigger the AI assistant component
     } else if (action?.action === 'emergency') {
@@ -118,7 +118,7 @@ const QuickActions = () => {
 
   return (
     <div className="glass-card border border-white/20 rounded-xl p-6">
-      <div className="flex items-center justify-between mb-4">
+      <div className="flex items-center justify-between mb-4 ">
         <h3 className="text-lg font-heading font-semibold text-foreground">
           {labels?.title}
         </h3>
@@ -135,7 +135,7 @@ const QuickActions = () => {
             key={action?.id}
             variant="ghost"
             onClick={() => handleActionClick(action)}
-            className="h-auto p-0 hover:scale-105 transition-transform duration-200"
+            className="h-auto p-0 hover:scale-105 transition-transform duration-200 w-full "
           >
             <div className={`${action?.color} rounded-xl p-4 w-full text-white relative overflow-hidden group`}>
               <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent" />
@@ -149,7 +149,7 @@ const QuickActions = () => {
                   />
                 </div>
                 
-                <h4 className="font-heading font-medium text-white mb-1 text-sm">
+                <h4 className="font-heading font-medium text-white mb-1 text-xs ">
                   {action?.label}
                 </h4>
                 

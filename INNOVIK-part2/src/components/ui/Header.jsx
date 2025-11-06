@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Icon from '../AppIcon';
 import Button from './Button';
+import Symptomchecker from 'pages/patient-dashboard/components/Symptomchecker';
 
 const Header = () => {
   const location = useLocation();
@@ -47,12 +48,12 @@ const Header = () => {
       <div className="flex items-center justify-between h-16 px-6">
         {/* Logo Section */}
         <div className="flex items-center space-x-3">
-          <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-therapeutic">
+          <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-blue-600">
             <Icon name="Heart" size={24} color="white" strokeWidth={2} />
           </div>
           <div className="flex flex-col">
             <h1 className="text-xl font-heading font-semibold text-foreground">
-              Sehaj Healthcare
+              Jeevani
             </h1>
             <span className="text-xs font-caption text-muted-foreground">
               Your Health, Our Priority
@@ -71,7 +72,7 @@ const Header = () => {
               iconName={item?.icon}
               iconPosition="left"
               iconSize={18}
-              className={`micro-interact ${
+              className={`micro-interact  ${
                 isActive(item?.path) 
                   ? 'bg-primary text-primary-foreground shadow-medical-sm' 
                   : 'text-muted-foreground hover:text-foreground hover:bg-muted'
@@ -93,7 +94,7 @@ const Header = () => {
               iconName="Globe"
               iconPosition="left"
               iconSize={16}
-              className="text-muted-foreground hover:text-foreground"
+              className="text-muted-foreground hover:text-foreground "
             >
               {languages?.find(lang => lang?.code === currentLanguage)?.flag}
             </Button>
@@ -128,7 +129,7 @@ const Header = () => {
               onClick={() => setIsProfileOpen(!isProfileOpen)}
               className="flex items-center space-x-2 text-muted-foreground hover:text-foreground"
             >
-              <div className="w-8 h-8 rounded-full bg-gradient-therapeutic flex items-center justify-center">
+              <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center">
                 <Icon name="User" size={16} color="white" />
               </div>
               <span className="hidden md:block font-caption font-medium">

@@ -7,7 +7,7 @@ const WelcomeCard = () => {
   const navigate = useNavigate();
   const [currentLanguage, setCurrentLanguage] = useState('en');
   const [timeUntilAppointment, setTimeUntilAppointment] = useState({
-    hours: 2,
+    hours: 5,
     minutes: 45,
     seconds: 30
   });
@@ -69,7 +69,7 @@ const WelcomeCard = () => {
   const messages = getWelcomeMessage();
 
   return (
-    <div className="glass-card border border-white/20 rounded-xl p-6 mb-6 bg-gradient-therapeutic relative overflow-hidden">
+    <div className="glass-card border border-white/20 rounded-xl p-6 mb-6 bg-blue-600 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent" />
       <div className="relative z-10">
         <div className="flex items-center justify-between mb-4">
@@ -79,7 +79,7 @@ const WelcomeCard = () => {
             </div>
             <div>
               <h2 className="text-xl font-heading font-semibold text-white">
-                {messages?.greeting}, John!
+                {messages?.greeting}, Ram
               </h2>
               <p className="text-white/80 font-caption">
                 {messages?.message}
@@ -111,10 +111,10 @@ const WelcomeCard = () => {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-white font-caption font-medium">
-                Dr. Sarah Wilson - Cardiology
+                Dr. Nandani Gupta - Cardiology
               </p>
               <p className="text-xs text-white/80 font-caption">
-                Today, 1:30 PM
+                Today, 7:30 PM
               </p>
             </div>
 

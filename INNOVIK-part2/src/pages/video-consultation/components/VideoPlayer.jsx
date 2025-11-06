@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Icon from '../../../components/AppIcon';
 import Button from '../../../components/ui/Button';
+import Webcam from 'react-webcam'
 
 const VideoPlayer = ({ 
   isFullscreen, 
@@ -97,13 +98,15 @@ const VideoPlayer = ({
           className="w-full h-full object-cover"
           autoPlay
           muted={isMuted}
-          poster="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&h=600&fit=crop"
-        />
+         // poster="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&h=600&fit=crop"
+         poster="turn on the video"
+        /> 
         
         {/* Video Overlay Controls */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/30">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/30">{isVideoEnabled?(<Webcam className='w-full h-full' />):(<div className='text-white ml-96 mt-56'>turn on the video</div>)}
+       
           {/* Top Controls */}
-          <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
+          <div className="absolute top-4 left-4 right-4 flex items-center justify-between ">
             <div className="flex items-center space-x-3">
               <div className="glass-card px-3 py-1 rounded-full">
                 <div className="flex items-center space-x-2">
@@ -209,12 +212,12 @@ const VideoPlayer = ({
         onMouseDown={handleDoctorVideoMouseDown}
       >
         {!isDoctorVideoMinimized ? (
-          <>
+          <> <Webcam />
             <video
               className="w-full h-full object-cover"
               autoPlay
               muted
-              poster="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=300&fit=crop"
+               poster="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=300&fit=crop"
             />
             <div className="absolute top-1 right-1">
               <Button

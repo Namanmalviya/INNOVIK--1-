@@ -3,7 +3,7 @@ import Icon from '../../../components/AppIcon';
 import Button from '../../../components/ui/Button';
 
 const MapView = ({ pharmacies, currentLanguage, selectedPharmacy, onPharmacySelect }) => {
-  const [mapCenter, setMapCenter] = useState({ lat: 30.7333, lng: 76.7794 }); // Chandigarh coordinates
+  const [mapCenter, setMapCenter] = useState({ lat: 22.71957, lng: 75.85773 }); // Chandigarh coordinates
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {

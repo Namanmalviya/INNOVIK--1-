@@ -46,6 +46,10 @@ const AIAssistant = () => {
     }, 3000);
   };
 
+const toai=()=>{
+  window.open("https://vapi.ai/?demo=true&shareKey=ac6c621a-5659-4061-9a81-580d2ca2cd28&assistantId=ce2883f5-f6af-4243-beb7-3b01aa89f423","_blank");
+}
+
   const handleStopListening = () => {
     setIsListening(false);
     setIsProcessing(true);
@@ -95,12 +99,13 @@ const AIAssistant = () => {
   return (
     <>
       {/* AI Assistant Bubble */}
-      <div className="fixed bottom-6 right-6 z-300">
+      <div className="fixed bottom-6 right-6 z-300" >
         <Button
           variant="default"
           size="icon"
-          onClick={handleToggleAssistant}
-          className={`w-14 h-14 rounded-full bg-gradient-therapeutic shadow-medical-lg float-action ${
+          onClick={toai}
+         // onClick={handleToggleAssistant}
+          className={`w-14 h-14 rounded-full bg-blue-600 shadow-medical-lg float-action ${
             isOpen ? 'scale-110' : ''
           } ${isListening ? 'animate-pulse-medical' : ''}`}
         >

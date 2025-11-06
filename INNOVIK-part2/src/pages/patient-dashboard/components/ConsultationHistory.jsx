@@ -15,7 +15,7 @@ const ConsultationHistory = () => {
   const consultations = [
     {
       id: 1,
-      doctor: "Dr. Sarah Wilson",
+      doctor: "Dr. Paridhi Gupta",
       specialty: "Cardiology",
       date: "2024-12-25",
       time: "2:30 PM",
@@ -29,7 +29,7 @@ const ConsultationHistory = () => {
     },
     {
       id: 2,
-      doctor: "Dr. Michael Chen",
+      doctor: "Dr. Prince Solanki",
       specialty: "General Medicine",
       date: "2024-12-20",
       time: "10:15 AM",
@@ -43,7 +43,7 @@ const ConsultationHistory = () => {
     },
     {
       id: 3,
-      doctor: "Dr. Emily Rodriguez",
+      doctor: "Dr. Naman Malviya",
       specialty: "Gastroenterology",
       date: "2024-12-15",
       time: "4:45 PM",
@@ -160,7 +160,7 @@ const ConsultationHistory = () => {
               
               <div className="flex space-x-4">
                 {/* Timeline Dot */}
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-therapeutic flex items-center justify-center relative z-10">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center relative z-10">
                   <Icon 
                     name={getConsultationTypeIcon(consultation?.type)} 
                     size={18} 

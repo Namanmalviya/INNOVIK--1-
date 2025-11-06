@@ -11,11 +11,11 @@ const SearchHeader = ({ onSearch, onLocationChange, onFilterChange, currentLangu
 
   const locationOptions = [
     { value: 'current', label: currentLanguage === 'hi' ? 'वर्तमान स्थान' : currentLanguage === 'pa' ? 'ਮੌਜੂਦਾ ਸਥਾਨ' : 'Current Location' },
-    { value: 'chandigarh', label: 'Chandigarh' },
+    { value: 'Indore', label: 'Indore' },
     { value: 'mohali', label: 'Mohali' },
-    { value: 'panchkula', label: 'Panchkula' },
+    { value: 'Bhopal', label: 'Panchkula' },
     { value: 'ludhiana', label: 'Ludhiana' },
-    { value: 'amritsar', label: 'Amritsar' }
+    { value: 'Mhow', label: 'Amritsar' }
   ];
 
   const handleSearch = () => {
@@ -53,7 +53,7 @@ const SearchHeader = ({ onSearch, onLocationChange, onFilterChange, currentLangu
   };
 
   return (
-    <div className="glass-card border border-white/20 rounded-xl p-6 mb-6">
+    <div className="glass-card border border-white/20 rounded-xl p-6 mb-6  ">
       <div className="flex flex-col lg:flex-row gap-4">
         {/* Medicine Search */}
         <div className="flex-1">
@@ -79,7 +79,7 @@ const SearchHeader = ({ onSearch, onLocationChange, onFilterChange, currentLangu
         </div>
 
         {/* Location Filter */}
-        <div className="w-full lg:w-64">
+        <div className="w-full lg:w-64 z-[99999]">
           <Select
             options={locationOptions}
             value={selectedLocation}

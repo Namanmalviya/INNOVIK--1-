@@ -30,24 +30,24 @@ const AppointmentBooking = () => {
 
   // Mock data for available slots and doctors
   const availableSlots = [
-    { date: '2025-01-02', time: '09:00', duration: '30', isBooked: false },
-    { date: '2025-01-02', time: '09:30', duration: '30', isBooked: false },
-    { date: '2025-01-02', time: '10:00', duration: '30', isBooked: true },
-    { date: '2025-01-02', time: '14:00', duration: '30', isBooked: false },
-    { date: '2025-01-02', time: '14:30', duration: '30', isBooked: false },
-    { date: '2025-01-02', time: '15:00', duration: '30', isBooked: false },
-    { date: '2025-01-02', time: '18:00', duration: '30', isBooked: false, isUrgent: true },
-    { date: '2025-01-03', time: '09:00', duration: '30', isBooked: false },
-    { date: '2025-01-03', time: '10:00', duration: '30', isBooked: false },
-    { date: '2025-01-03', time: '11:00', duration: '30', isBooked: false },
-    { date: '2025-01-03', time: '16:00', duration: '30', isBooked: false },
-    { date: '2025-01-03', time: '17:00', duration: '30', isBooked: false }
+    { date: '2025-10-06', time: '09:00', duration: '30', isBooked: false },
+    { date: '2025-10-06', time: '09:30', duration: '30', isBooked: false },
+    { date: '2025-10-06', time: '10:00', duration: '30', isBooked: true },
+    { date: '2025-10-05', time: '14:00', duration: '30', isBooked: false },
+    { date: '2025-10-06', time: '14:30', duration: '30', isBooked: false },
+    { date: '2025-10-05', time: '15:00', duration: '30', isBooked: false },
+    { date: '2025-10-06', time: '18:00', duration: '30', isBooked: false, isUrgent: true },
+    { date: '2025-10-07', time: '09:00', duration: '30', isBooked: false },
+    { date: '2025-10-07', time: '10:00', duration: '30', isBooked: false },
+    { date: '2025-10-07', time: '11:00', duration: '30', isBooked: false },
+    { date: '2025-10-07', time: '16:00', duration: '30', isBooked: false },
+    { date: '2025-10-07', time: '17:00', duration: '30', isBooked: false }
   ];
 
   const mockDoctors = [
     {
       id: 1,
-      name: "Dr. Sarah Wilson",
+      name: "Dr. Nandani Gupta",
       specialization: "Cardiologist",
       specialization_hi: "हृदय रोग विशेषज्ञ",
       specialization_pa: "ਦਿਲ ਦੇ ਰੋਗ ਮਾਹਿਰ",
@@ -59,11 +59,11 @@ const AppointmentBooking = () => {
       languages: ['English', 'Hindi'],
       isOnline: true,
       nextAvailable: "Today 2:00 PM",
-      availableSlots: availableSlots?.filter(slot => ['2025-01-02', '2025-01-03']?.includes(slot?.date))
+      availableSlots: availableSlots?.filter(slot => ['2025-10-05', '2025-10-06']?.includes(slot?.date))
     },
     {
       id: 2,
-      name: "Dr. Rajesh Kumar",
+      name: "Dr.Prince Solanki",
       specialization: "General Physician",
       specialization_hi: "सामान्य चिकित्सक",
       specialization_pa: "ਆਮ ਡਾਕਟਰ",
@@ -75,11 +75,11 @@ const AppointmentBooking = () => {
       languages: ['English', 'Hindi', 'Punjabi'],
       isOnline: true,
       nextAvailable: "Tomorrow 9:00 AM",
-      availableSlots: availableSlots?.filter(slot => ['2025-01-02', '2025-01-03']?.includes(slot?.date))
+      availableSlots: availableSlots?.filter(slot => ['2025-10-05', '2025-10-07']?.includes(slot?.date))
     },
     {
       id: 3,
-      name: "Dr. Priya Sharma",
+      name: "Dr. Paridhi Gupta",
       specialization: "Dermatologist",
       specialization_hi: "त्वचा रोग विशेषज्ञ",
       specialization_pa: "ਚਮੜੀ ਦੇ ਰੋਗ ਮਾਹਿਰ",
@@ -91,11 +91,11 @@ const AppointmentBooking = () => {
       languages: ['English', 'Hindi'],
       isOnline: false,
       nextAvailable: "Jan 3, 10:00 AM",
-      availableSlots: availableSlots?.filter(slot => ['2025-01-03']?.includes(slot?.date))
+      availableSlots: availableSlots?.filter(slot => ['2025-10-05']?.includes(slot?.date))
     },
     {
       id: 4,
-      name: "Dr. Amrit Singh",
+      name: "Dr. Naman Malviya",
       specialization: "Orthopedist",
       specialization_hi: "हड्डी रोग विशेषज्ञ",
       specialization_pa: "ਹੱਡੀਆਂ ਦੇ ਰੋਗ ਮਾਹਿਰ",
@@ -107,7 +107,7 @@ const AppointmentBooking = () => {
       languages: ['English', 'Punjabi', 'Hindi'],
       isOnline: true,
       nextAvailable: "Today 4:00 PM",
-      availableSlots: availableSlots?.filter(slot => ['2025-01-02', '2025-01-03']?.includes(slot?.date))
+      availableSlots: availableSlots?.filter(slot => ['2025-10-05', '2025-10-07']?.includes(slot?.date))
     }
   ];
 

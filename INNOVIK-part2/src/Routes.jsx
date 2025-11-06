@@ -9,6 +9,8 @@ import PatientDashboard from './pages/patient-dashboard';
 import MedicineAvailability from './pages/medicine-availability';
 import DigitalHealthRecords from './pages/digital-health-records';
 import VideoConsultation from './pages/video-consultation';
+import Symptomchecker from './pages//patient-dashboard/components/Symptomchecker';
+
 
 const Routes = () => {
   return (
@@ -24,6 +26,8 @@ const Routes = () => {
         <Route path="/medicine-availability" element={<MedicineAvailability />} />
         <Route path="/digital-health-records" element={<DigitalHealthRecords />} />
         <Route path="/video-consultation" element={<VideoConsultation />} />
+         <Route path="/symptomchecker" element={<Symptomchecker />} /> 
+       
         <Route path="*" element={<NotFound />} />
       </RouterRoutes>
       </ErrorBoundary>

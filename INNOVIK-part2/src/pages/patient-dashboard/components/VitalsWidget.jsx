@@ -7,7 +7,7 @@ const VitalsWidget = () => {
   const [vitals, setVitals] = useState({
     temperature: { value: 98.6, unit: '°F', status: 'normal' },
     bloodPressure: { systolic: 120, diastolic: 80, status: 'normal' },
-    heartRate: { value: 72, unit: 'bpm', status: 'normal' },
+    heartRate: { value: 70, unit: 'bpm', status: 'normal' },
     oxygenLevel: { value: 98, unit: '%', status: 'normal' }
   });
   const [isEditing, setIsEditing] = useState(null);
@@ -44,7 +44,7 @@ const VitalsWidget = () => {
         };
       default:
         return {
-          title: 'Vital Signs',
+          title: 'Ideal Vital Signs of a Healthy Person',
           temperature: 'Temperature',
           bloodPressure: 'Blood Pressure',
           heartRate: 'Heart Rate',
@@ -61,10 +61,10 @@ const VitalsWidget = () => {
       case 'high':
         return 'bg-error/10 border-error/20 text-error';
       case 'low':
-        return 'bg-warning/10 border-warning/20 text-warning';
+        return 'bg-black border-warning/20 text-warning';
       case 'normal':
       default:
-        return 'bg-success/10 border-success/20 text-success';
+        return 'bg-blue-900 border-success/20 text-success';
     }
   };
 
@@ -122,25 +122,25 @@ const VitalsWidget = () => {
       type: 'temperature',
       label: labels?.temperature,
       value: `${vitals?.temperature?.value}${vitals?.temperature?.unit}`,
-      color: 'bg-gradient-to-br from-orange-400 to-red-500'
+      color: 'bg-blue-600'
     },
     {
       type: 'bloodPressure',
       label: labels?.bloodPressure,
       value: `${vitals?.bloodPressure?.systolic}/${vitals?.bloodPressure?.diastolic}`,
-      color: 'bg-gradient-to-br from-blue-400 to-indigo-500'
+      color: 'bg-blue-600'
     },
     {
       type: 'heartRate',
       label: labels?.heartRate,
       value: `${vitals?.heartRate?.value} ${vitals?.heartRate?.unit}`,
-      color: 'bg-gradient-to-br from-pink-400 to-rose-500'
+      color: 'bg-blue-600'
     },
     {
       type: 'oxygenLevel',
       label: labels?.oxygenLevel,
       value: `${vitals?.oxygenLevel?.value}${vitals?.oxygenLevel?.unit}`,
-      color: 'bg-gradient-to-br from-cyan-400 to-blue-500'
+      color: 'bg-blue-600'
     }
   ];
 

@@ -114,7 +114,7 @@ const VideoConsultation = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {!isFullscreen && <Header />}
-      <ConsultationStatus />
+      {/* <ConsultationStatus /> */}
       <div className={`${isFullscreen ? 'fixed inset-0 z-300' : 'container mx-auto px-4 py-6'}`}>
         {/* Page Header - Hidden in fullscreen */}
         {!isFullscreen && (

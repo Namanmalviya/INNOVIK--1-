@@ -23,7 +23,7 @@ const PatientDashboard = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Patient Dashboard - Sehaj Healthcare</title>
+        <title>Patient Dashboard -Jeevani</title>
         <meta name="description" content="Manage your health with personalized dashboard, appointment tracking, vitals monitoring, and prescription management." />
       </Helmet>
 

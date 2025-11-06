@@ -32,11 +32,11 @@ const MedicineAvailability = () => {
   const mockPharmacies = [
     {
       id: 1,
-      name: "Apollo Pharmacy",
-      address: "Sector 17, Chandigarh",
+      name: "A R Chemist",
+      address: "Shri Ram medical,Borkhedi",
       distance: 0.8,
       phone: "+91-172-2701234",
-      coordinates: { lat: 30.7333, lng: 76.7794 },
+      coordinates: { lat: 22.58022, lng: 75.78893 },
       stockStatus: "in-stock",
       deliveryTime: 15,
       rating: 4.5,
@@ -54,10 +54,10 @@ const MedicineAvailability = () => {
     {
       id: 2,
       name: "MedPlus Pharmacy",
-      address: "Sector 22, Chandigarh",
+      address: "Samarth medicose,kalndi vihar colony",
       distance: 1.2,
       phone: "+91-172-2705678",
-      coordinates: { lat: 30.7267, lng: 76.7781 },
+      coordinates: { lat: 22.57989, lng:75.78913 },
       stockStatus: "low-stock",
       deliveryTime: 20,
       rating: 4.2,
@@ -264,7 +264,7 @@ const MedicineAvailability = () => {
         <meta name="description" content={getPageDescription()} />
         <meta name="keywords" content="medicine, pharmacy, availability, stock, healthcare, real-time" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      <div className="min-h-screen relative z-50 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
         <Header />
         <ConsultationStatus />
         
@@ -276,9 +276,9 @@ const MedicineAvailability = () => {
             onFilterChange={handleFilterChange}
             currentLanguage={currentLanguage}
           />
-
+                <h2 className='font-bold ml-96 mt-24 text-3xl'>Filter by choice</h2>
           {/* Filter Panel */}
-          <FilterPanel
+          <FilterPanel className='  absolute z-[999] mt-40'
             onFilterChange={handleFilterChange}
             currentLanguage={currentLanguage}
             isOpen={isFilterOpen}
@@ -286,7 +286,7 @@ const MedicineAvailability = () => {
           />
 
           {/* View Toggle */}
-          <ViewToggle
+          <ViewToggle  className='  absolute'
             currentView={currentView}
             onViewChange={handleViewChange}
             currentLanguage={currentLanguage}

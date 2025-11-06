@@ -94,11 +94,11 @@ const FilterPanel = ({ onFilterChange, currentLanguage, isOpen, onToggle }) => {
   const labels = getFilterLabels();
 
   return (
-    <div className={`glass-card border border-white/20 rounded-xl transition-all duration-300 ${
-      isOpen ? 'p-6 mb-6' : 'p-4 mb-4'
+    <div className={`glass-card border border-white/20 rounded-xl transition-all  duration-300   ${
+      isOpen ? 'p-6 mb-6  ' : 'p-4 mb-4'
     }`}>
       {/* Filter Header */}
-      <div className="flex items-center justify-between mb-4">
+      <div className="flex items-center justify-between mb-4 ">
         <div className="flex items-center space-x-2">
           <Icon name="Filter" size={20} className="text-primary" />
           <h3 className="font-heading font-semibold text-foreground">
