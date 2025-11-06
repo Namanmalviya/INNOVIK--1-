@@ -83,7 +83,7 @@ app.post('/chatai',async(req,res)=>{
     }
 })
 
-app.listen(1000,(req,res)=>{
-  console.log('h')
-})
-//export default app;
+// app.listen(1000,(req,res)=>{
+//   console.log('h')
+// })
+export default app;
