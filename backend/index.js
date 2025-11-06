@@ -5,7 +5,13 @@ import axios from 'axios'
 import nodemailer from 'nodemailer'
 import pkg from 'dotenv'
 
-app.use(cors())
+app.use(cors(
+    {
+    origin: {"https://innovik-1-xzbo.vercel.app/"},
+    methods: {"POST", "GET", "DELETE", "PUT"},
+    credentials: true
+  }
+))
 app.use(express.json());
 
 app.get('/',(req,res)=>{
