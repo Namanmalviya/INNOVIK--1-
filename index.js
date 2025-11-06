@@ -84,6 +84,4 @@ app.post('/chatai',async(req,res)=>{
 })
 
 
-app.listen(1000,()=>{
-    console.log('backend started')
-})
+export default app;
