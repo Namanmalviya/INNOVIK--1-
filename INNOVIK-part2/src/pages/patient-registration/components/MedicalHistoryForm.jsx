@@ -135,19 +135,20 @@ const MedicalHistoryForm = ({ currentLanguage, onSubmit, onSkip, isLoading }) =>
         <h3 className="text-xl font-heading font-semibold text-foreground mb-2">
           {labels?.title}
         </h3>
-        <p className="text-sm text-muted-foreground font-caption">
+        <p className="text-sm  font-caption text-black">
           {labels?.subtitle}
         </p>
       </div>
       <div className="flex justify-center">
         <Button
+        
           variant="ghost"
           size="sm"
           onClick={() => setIsExpanded(!isExpanded)}
           iconName={isExpanded ? "ChevronUp" : "ChevronDown"}
           iconPosition="right"
           iconSize={16}
-          className="text-primary hover:text-primary/80"
+          className="bg-red-500 text-primary hover:text-primary/80"
         >
           {isExpanded ? labels?.collapseForm : labels?.expandForm}
         </Button>

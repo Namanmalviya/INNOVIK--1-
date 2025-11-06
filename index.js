@@ -14,28 +14,28 @@ app.get('/',(req,res)=>{
 
 
 app.post('/',async(req,res)=>{
- const { to, subject, message } = req.body;
+ const { to, subject, text } = req.body;
 console.log('dfsf');
   try {
-    // 1️⃣ Create transporter
+    
    
     const transporter = nodemailer.createTransport({
-      service: "gmail", // can also use Outlook, Yahoo, or custom SMTP
+      service: "gmail", 
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
     });
 
-    // 2️⃣ Mail options
+    
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to,
       subject,
-      text: message,
+      text:text,
     };
 
-    // 3️⃣ Send mail
+   
     await transporter.sendMail(mailOptions);
 
     res.json({ success: true, message: "Email sent successfully!" });
@@ -63,7 +63,7 @@ app.post('/chatai',async(req,res)=>{
       {
         "parts": [
           {
-            "text":'only medical and healthcare related question , give answers like real doctor not ai agent'+ prompt
+            "text":'only medical and healthcare related question , give answers like real doctor not ai agent in short and impactful '+ prompt
           }
         ]
       }

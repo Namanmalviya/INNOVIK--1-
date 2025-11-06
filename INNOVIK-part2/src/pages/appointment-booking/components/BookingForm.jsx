@@ -9,12 +9,12 @@ const BookingForm = ({ selectedDoctor, selectedDate, selectedSlot, onBookingSubm
     appointmentType: 'video',
     consultationLanguage: currentLanguage,
     specialRequirements: '',
-    patientName: 'John Doe',
-    patientEmail: 'john.doe@email.com',
+    patientName: 'Naman Malviya',
+    patientEmail: 'namanmalviya234@gmail.com',
     patientPhone: '+91 98765 43210'
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-
+   
   const appointmentTypes = [
     { 
       value: 'video', 
@@ -39,14 +39,17 @@ const BookingForm = ({ selectedDoctor, selectedDate, selectedSlot, onBookingSubm
       ...prev,
       [field]: value
     }));
+	//setTo(patientEmail)
   };
  const sendmail=async()=>{
 const to='namanmalviya234@gmail.com'
+
  try {
       const res = await axios.post("http://localhost:1000/", {
         to:to,
+		//patientEmail:patientEmail,
         subject: "Appointment Booking Confirmation",
-		text: `Dear ${formData.patientName},\n\nYour appointment with Dr. ${selectedDoctor.name} on ${formatDate(selectedDate)} at ${selectedSlot.time} has been successfully booked.\n\nThank you for choosing our service!\n\nBest regards,\nHealthcare Team`
+		text: `Dear ${formData.patientName},\n\nYour appointment with Dr. ${selectedDoctor.name} on ${formatDate(selectedDate)} at ${selectedSlot.time} has been successfully booked.\n\nThank you for choosing our service!\n\nBest regards,\nJeevani Team`
       });
       alert(res.data.message);
     } catch (err) {
@@ -217,7 +220,7 @@ const to='namanmalviya234@gmail.com'
                  currentLanguage === 'pa' ? 'ਈਮੇਲ ਪਤਾ' : 'Email Address'}
           type="email"
           value={formData?.patientEmail}
-          onChange={(e) => handleInputChange('patientEmail', e?.target?.value)}
+          onChange={(e) => setTo((e)=>e.target.value)}
           required
         />
 

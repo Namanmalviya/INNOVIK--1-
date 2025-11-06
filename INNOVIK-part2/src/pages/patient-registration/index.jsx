@@ -6,6 +6,7 @@ import RegistrationForm from './components/RegistrationForm';
 import SocialLogin from './components/SocialLogin';
 import MedicalHistoryForm from './components/MedicalHistoryForm';
 import LanguageToggle from './components/LanguageToggle';
+import Registration from './components/Registration';
 
 const PatientRegistration = () => {
   const navigate = useNavigate();
