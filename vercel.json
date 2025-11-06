@@ -8,7 +8,8 @@
     {
       "src": "INNOVIK-part2/package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "INNOVIK-part2/dist" }
+      "config": { "distDir": "INNOVIK-part2/build" }
+
     }
   ],
   "routes": [
